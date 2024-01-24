@@ -125,7 +125,7 @@ export default function Navbar() {
                     >
                       <img
                         className="inline-block w-10 h-10 rounded-full"
-                        src="https://drive.google.com/file/d/10p1pEXP_kBR43v2ZR-5RPHR0FsgjCN-M/view"
+                        src="src/assets/avatar.png"
                         alt="Dan_Abromov"
                       />{" "}
                     </Link>
@@ -283,7 +283,7 @@ export default function Navbar() {
                   <a href="#" className="flex items-center text-gray-700 ">
                     <img
                       className="inline-block w-10 h-10 rounded-full"
-                      src="https://drive.google.com/file/d/10p1pEXP_kBR43v2ZR-5RPHR0FsgjCN-M/view"
+                      src="src/assets/avatar.png"
                       alt="Dan_Abromov"
                     />
                   </a>
