@@ -125,7 +125,7 @@ export default function Navbar() {
                     >
                       <img
                         className="inline-block w-10 h-10 rounded-full"
-                        src="src/assets/avatar.png"
+                        src="https://img.freepik.com/free-photo/androgynous-avatar-non-binary-queer-person_23-2151100226.jpg?size=626&ext=jpg"
                         alt="Dan_Abromov"
                       />{" "}
                     </Link>
@@ -283,7 +283,7 @@ export default function Navbar() {
                   <a href="#" className="flex items-center text-gray-700 ">
                     <img
                       className="inline-block w-10 h-10 rounded-full"
-                      src="src/assets/avatar.png"
+                      src="https://img.freepik.com/free-photo/androgynous-avatar-non-binary-queer-person_23-2151100226.jpg?size=626&ext=jpg"
                       alt="Dan_Abromov"
                     />
                   </a>
