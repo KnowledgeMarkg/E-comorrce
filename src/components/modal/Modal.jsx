@@ -1,8 +1,9 @@
 import { Dialog, Transition } from "@headlessui/react";
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import myContext from "../../context/data/myContext";
 
 export default function Modal({
   name,
@@ -24,6 +25,9 @@ export default function Modal({
     setIsOpen(false);
   }
 
+  const context = useContext(myContext);
+  const { toggleMode, mode } = context;
+
   function openModal() {
     setIsOpen(true);
   }
@@ -44,12 +48,24 @@ export default function Modal({
           type="button"
           onClick={() => checkUser(user, openModal, navigate)}
           className="w-full bg-violet-600 py-2 text-center rounded-lg text-white font-bold"
+          style={{
+            backgroundColor: mode === "dark" ? "rgb(62 64 66)" : "",
+            color: mode === "dark" ? "white" : "",
+          }}
         >
           Buy Now
         </button>
       </div>
 
-      <Transition appear show={isOpen} as={Fragment}>
+      <Transition
+        appear
+        show={isOpen}
+        as={Fragment}
+        style={{
+          backgroundColor: mode === "dark" ? "rgb(62 64 66)" : "",
+          color: mode === "dark" ? "white" : "",
+        }}
+      >
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
           <Transition.Child
             as={Fragment}
@@ -74,7 +90,13 @@ export default function Modal({
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl p-2  text-left align-middle shadow-xl transition-all bg-gray-50">
+                <Dialog.Panel
+                  className="w-full max-w-md transform overflow-hidden rounded-2xl p-2  text-left align-middle shadow-xl transition-all bg-gray-50"
+                  style={{
+                    backgroundColor: mode === "dark" ? "rgb(62 64 66)" : "",
+                    color: mode === "dark" ? "white" : "",
+                  }}
+                >
                   <section className="">
                     <div className="flex flex-col items-center justify-center py-8 mx-auto  lg:py-0">
                       <div className="w-full  rounded-lg md:mt-0 sm:max-w-md xl:p-0 ">
@@ -84,6 +106,9 @@ export default function Modal({
                               <label
                                 htmlFor="name"
                                 className="block mb-2 text-sm font-medium text-gray-900"
+                                style={{
+                                  color: mode === "dark" ? "white" : "",
+                                }}
                               >
                                 Enter Full Name
                               </label>
@@ -95,12 +120,20 @@ export default function Modal({
                                 id="name"
                                 className=" border outline-0 border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-gray-100"
                                 required
+                                style={{
+                                  backgroundColor:
+                                    mode === "dark" ? "rgb(62 64 66)" : "",
+                                  color: mode === "dark" ? "white" : "",
+                                }}
                               />
                             </div>
                             <div>
                               <label
                                 htmlFor="email"
                                 className="block mb-2 text-sm font-medium text-gray-900"
+                                style={{
+                                  color: mode === "dark" ? "white" : "",
+                                }}
                               >
                                 Enter Full Address
                               </label>
@@ -112,12 +145,20 @@ export default function Modal({
                                 id="address"
                                 className=" border outline-0 border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-gray-100"
                                 required
+                                style={{
+                                  backgroundColor:
+                                    mode === "dark" ? "rgb(62 64 66)" : "",
+                                  color: mode === "dark" ? "white" : "",
+                                }}
                               />
                             </div>
                             <div>
                               <label
                                 htmlFor="pincode"
                                 className="block mb-2 text-sm font-medium text-gray-900"
+                                style={{
+                                  color: mode === "dark" ? "white" : "",
+                                }}
                               >
                                 Enter Pincode
                               </label>
@@ -129,12 +170,20 @@ export default function Modal({
                                 id="pincode"
                                 className=" border outline-0 border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-gray-100"
                                 required
+                                style={{
+                                  backgroundColor:
+                                    mode === "dark" ? "rgb(62 64 66)" : "",
+                                  color: mode === "dark" ? "white" : "",
+                                }}
                               />
                             </div>
                             <div>
                               <label
                                 htmlFor="mobileNumber"
                                 className="block mb-2 text-sm font-medium text-gray-900"
+                                style={{
+                                  color: mode === "dark" ? "white" : "",
+                                }}
                               >
                                 Enter Mobile Number
                               </label>
@@ -146,6 +195,11 @@ export default function Modal({
                                 id="mobileNumber"
                                 className=" border outline-0 border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-gray-100"
                                 required
+                                style={{
+                                  backgroundColor:
+                                    mode === "dark" ? "rgb(62 64 66)" : "",
+                                  color: mode === "dark" ? "white" : "",
+                                }}
                               />
                             </div>
                           </form>
@@ -156,6 +210,7 @@ export default function Modal({
                             }}
                             type="button"
                             className="focus:outline-none w-full text-white bg-violet-600 hover:bg-violet-800  outline-0 font-medium rounded-lg text-sm px-5 py-2.5 "
+                            style={{ color: mode === "dark" ? "white" : "" }}
                           >
                             Order Now
                           </button>
