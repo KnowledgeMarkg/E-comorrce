@@ -63,7 +63,7 @@ export default function Navbar() {
                   color: mode === "dark" ? "white" : "",
                 }}
               >
-                <div className="flex px-4 pb-2 pt-28">
+                <div className="flex px-4 pb-2 pt-20">
                   <button
                     type="button"
                     className="-m-2 inline-flex items-center justify-center rounded-md p-2 text-gray-400"
@@ -254,6 +254,7 @@ export default function Navbar() {
                       Logout
                     </a>
                   ) : (
+                    <>
                     <Link
                       to={"/signup"}
                       className="text-sm font-medium text-gray-700 cursor-pointer  "
@@ -261,6 +262,14 @@ export default function Navbar() {
                     >
                       Signup
                     </Link>
+                    <Link
+                      to={"/login"}
+                      className="text-sm font-medium text-gray-700 cursor-pointer  "
+                      style={{ color: mode === "dark" ? "white" : "" }}
+                    >
+                      login
+                    </Link>
+                    </>
                   )}
                 </div>
 
@@ -272,7 +281,7 @@ export default function Navbar() {
                       className="block h-auto w-5 flex-shrink-0"
                     />
                     <span
-                      className="ml-3 block text-sm font-medium"
+                      className="ml-2 block text-sm font-medium"
                       style={{ color: mode === "dark" ? "white" : "" }}
                     >
                       INDIA

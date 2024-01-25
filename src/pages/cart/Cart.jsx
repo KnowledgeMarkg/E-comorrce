@@ -10,6 +10,7 @@ import { addDoc, collection } from 'firebase/firestore';
 import { fireDB } from '../../firebase/FirebaseConfig';
 
 
+
 function Cart() {
 
   const context = useContext(myContext)
@@ -46,6 +47,23 @@ function Cart() {
   const grandTotal = shipping + totalAmout;
   // console.log(grandTotal)
 
+
+ // User Fetch 
+ 
+//  const [user, setUser] = useState(null); // User state to store user authentication status
+
+//   useEffect(() => {
+//     // Check if user details are present in localStorage
+//     const storedUser = JSON.parse(localStorage.getItem('user'));
+//     if (storedUser && storedUser.user && storedUser.user.uid) {
+//       setUser(storedUser.user); // Set the user state if user is logged in
+//     } else {
+//       setUser(null); // Set the user state to null if user is not logged in
+//     }
+//   }, []);
+
+  const user = JSON.parse(localStorage.getItem('user'));
+
   /**========================================================================
    *!                           Payment Intigration
    *========================================================================**/ 
@@ -56,6 +74,11 @@ function Cart() {
   const [phoneNumber, setPhoneNumber] = useState("")
 
   const buyNow = async () => {
+    if (!user) {
+      toast.error("Please login first");
+      return; // Prevent further execution of the function if the user is not logged in
+    }
+    
     if (name === "" || address == "" || pincode == "" || phoneNumber == "") {
       return toast.error("All fields are required", {
         position: "top-center",
@@ -199,6 +222,7 @@ function Cart() {
               setPincode={setPincode}
               setPhoneNumber={setPhoneNumber}
               buyNow={buyNow}
+              user={user}
             />
           </div>
         </div>
