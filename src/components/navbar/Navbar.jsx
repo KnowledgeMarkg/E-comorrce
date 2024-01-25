@@ -116,7 +116,22 @@ export default function Navbar() {
                       </a>
                     </div>
                   ) : (
-                    ""
+                    <>
+                    <Link
+                      to={"/signup"}
+                      className="-m-1 block p-1 font-medium text-gray-900 cursor-pointer"
+                      style={{ color: mode === "dark" ? "white" : "" }}
+                    >
+                      Signup
+                    </Link>
+                    <Link
+                      to={"/login"}
+                      className="-m-2 block p-2 font-medium text-gray-900 cursor-pointer"
+                      style={{ color: mode === "dark" ? "white" : "" }}
+                    >
+                      login
+                    </Link>
+                    </>
                   )}
                   <div className="flow-root">
                     <Link
@@ -133,9 +148,9 @@ export default function Navbar() {
                 </div>
 
                 <div className="border-t border-gray-200 px-4 py-6">
-                  <a href="#" className="-m-2 flex items-center p-2">
+                  <a href="" className="-m-2 flex items-center p-2">
                     <img
-                      src="img/indiaflag.png"
+                      src="https://ecommerce-sk.vercel.app/img/indiaflag.png"
                       alt=""
                       className="block h-auto w-5 flex-shrink-0"
                     />
