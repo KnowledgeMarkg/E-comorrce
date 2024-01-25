@@ -10,7 +10,7 @@ Currently, two official plugins are available:
 
 # Eccormorce - An E-commerce Website
 
-Eccormorce is a modern e-commerce website built with React, Firebase, and Vite. It provides a seamless shopping experience for users to browse products, add them to their cart, and complete the checkout process.
+Eccormorce is a modern e-commerce website built with React, Firebase, Vite, and Tailwind CSS. It provides a seamless shopping experience for users to browse products, add them to their cart, and complete the checkout process.
 
 ## Features
 
@@ -27,9 +27,9 @@ Eccormorce is a modern e-commerce website built with React, Firebase, and Vite. 
 - **React:** Frontend development library for building user interfaces.
 - **Firebase:** Backend-as-a-Service (BaaS) platform for authentication, database, and hosting.
 - **Vite:** Build tool for modern web development, providing a faster development experience.
+- **Tailwind CSS:** Utility-first CSS framework for styling.
 - **React Router:** Library for routing in React applications.
 - **Redux:** State management library for managing application state.
-- **Tailwind CSS:** Utility-first CSS framework for styling.
 
 ## Getting Started
 
@@ -53,4 +53,5 @@ Contributions are welcome! If you'd like to contribute to Eccormorce, please fol
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
 
