@@ -8,7 +8,9 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 # Eccormorce - An E-commerce Website
 
-Eccormorce is a modern e-commerce website built with React and Firebase. It provides a seamless shopping experience for users to browse products, add them to their cart, and complete the checkout process.
+# Eccormorce - An E-commerce Website
+
+Eccormorce is a modern e-commerce website built with React, Firebase, and Vite. It provides a seamless shopping experience for users to browse products, add them to their cart, and complete the checkout process.
 
 ## Features
 
@@ -24,6 +26,7 @@ Eccormorce is a modern e-commerce website built with React and Firebase. It prov
 
 - **React:** Frontend development library for building user interfaces.
 - **Firebase:** Backend-as-a-Service (BaaS) platform for authentication, database, and hosting.
+- **Vite:** Build tool for modern web development, providing a faster development experience.
 - **React Router:** Library for routing in React applications.
 - **Redux:** State management library for managing application state.
 - **Tailwind CSS:** Utility-first CSS framework for styling.
@@ -35,7 +38,7 @@ To get started with Eccormorce locally, follow these steps:
 1. Clone this repository.
 2. Install dependencies using `npm install`.
 3. Set up a Firebase project and configure it in the project.
-4. Run the app using `npm start`.
+4. Run the app using `npm run dev`.
 
 ## Contributing
 
@@ -50,3 +53,4 @@ Contributions are welcome! If you'd like to contribute to Eccormorce, please fol
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
