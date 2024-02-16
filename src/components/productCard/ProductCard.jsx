@@ -2,8 +2,8 @@ import React, { useContext, useEffect, useState } from "react";
 import myContext from "../../context/data/myContext";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../../redux/cartSlice";
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function ProductCard() {
   const context = useContext(myContext);
@@ -37,7 +37,8 @@ function ProductCard() {
     .filter((obj) => obj.title.toLowerCase().includes(searchkey.toLowerCase()))
     .filter(
       (obj) =>
-        !filterType || obj.category.toLowerCase().includes(filterType.toLowerCase())
+        !filterType ||
+        obj.category.toLowerCase().includes(filterType.toLowerCase())
     )
     .filter((obj) => !filterPrice || obj.price.includes(filterPrice));
 
@@ -67,7 +68,9 @@ function ProductCard() {
                   }}
                 >
                   <div
-                    onClick={() => (window.location.href = `/productinfo/${id}`)}
+                    onClick={() =>
+                      (window.location.href = `/productinfo/${id}`)
+                    }
                     className="flex justify-center cursor-pointer"
                   >
                     <img
@@ -87,8 +90,10 @@ function ProductCard() {
                       className="title-font text-lg font-medium text-gray-900 mb-3"
                       style={{ color: mode === "dark" ? "white" : "" }}
                     >
-                      {title}
+                      {title.split(" ").slice(0, 12).join(" ")}
+                      {title.split(" ").length > 10 ? "..." : ""}
                     </h1>
+
                     <p
                       className="leading-relaxed mb-3"
                       style={{ color: mode === "dark" ? "white" : "" }}

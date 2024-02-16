@@ -225,7 +225,11 @@ export default function Navbar() {
                       className=" text-2xl font-bold text-black  px-2 py-1 rounded"
                       style={{ color: mode === "dark" ? "white" : "" }}
                     >
-                      All IT Solutions
+                      <img
+                        className="inline-block w-20"
+                        src="https://media6.ppl-media.com/static/purplle/img/purplle-logo-1.svg"
+                        alt="Dan_Abromov"
+                      />
                     </h1>
                   </div>
                 </Link>

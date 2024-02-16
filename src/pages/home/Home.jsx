@@ -6,6 +6,7 @@ import Filter from "../../components/filter/Filter";
 import ProductCard from "../../components/productCard/ProductCard";
 import Track from "../../components/track/Track";
 import Testimonial from "../../components/testimonial/Testimonial";
+import CarouselDarkVariant from "../../components/heroSection/Carousel";
 const Home = () => {
   const context = useContext(myContext);
   const { toggleMode, mode } = context;
@@ -16,6 +17,7 @@ const Home = () => {
                   color: mode === "dark" ? "#FAFBFF" : "",
                 }}>
         <HeroSection />
+        {/* <CarouselDarkVariant/> */}
         <Filter />
         <ProductCard />
         <Track />
