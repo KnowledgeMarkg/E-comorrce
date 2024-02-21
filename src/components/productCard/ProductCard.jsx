@@ -90,8 +90,9 @@ function ProductCard() {
                       className="title-font text-lg font-medium text-gray-900 mb-3"
                       style={{ color: mode === "dark" ? "white" : "" }}
                     >
-                      {title.split(" ").slice(0, 12).join(" ")}
-                      {title.split(" ").length > 10 ? "..." : ""}
+                      {title.length > 40
+                        ? title.substring(0, 40) + "..."
+                        : title}
                     </h1>
 
                     <p
