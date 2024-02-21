@@ -3,6 +3,8 @@ import myContext from "../../context/data/myContext";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../../redux/cartSlice";
 import { toast } from "react-toastify";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDollarSign } from '@fortawesome/free-solid-svg-icons';
 import "react-toastify/dist/ReactToastify.css";
 
 function ProductCard() {
@@ -90,8 +92,8 @@ function ProductCard() {
                       className="title-font text-lg font-medium text-gray-900 mb-3"
                       style={{ color: mode === "dark" ? "white" : "" }}
                     >
-                      {title.length > 40
-                        ? title.substring(0, 40) + "..."
+                      {title.length > 35
+                        ? title.substring(0, 35) + "..."
                         : title}
                     </h1>
 
@@ -99,7 +101,8 @@ function ProductCard() {
                       className="leading-relaxed mb-3"
                       style={{ color: mode === "dark" ? "white" : "" }}
                     >
-                      ₹{price}
+                    <FontAwesomeIcon icon={faDollarSign} className="mr-1" />
+                      {price}
                     </p>
                     <div className=" flex justify-center">
                       <button
