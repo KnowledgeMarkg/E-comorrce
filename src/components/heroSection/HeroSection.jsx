@@ -6,10 +6,10 @@ function HeroSection({ content, category, title, url, videoSrc, left, mode }) {
         <p  style={{ color: mode === "dark" ? "white" : "" }} className="mb-3 text-lg font-semibold uppercase leading-snug tracking-wide text-purple-600">
           {category}
         </p>
-        <h2  style={{ color: mode === "dark" ? "white" : "" }} className="mb-8 text-4xl font-extrabold tracking-tight xl:text-6xl">
+        <h2  style={{ color: mode === "dark" ? "white" : "" }} className="mb-8 text-2xl font-extrabold tracking-tight xl:text-2xl">
           {title}
         </h2>
-        <p className="mb-6 text-xl font-medium leading-8 text-gray-500 xl:text-2xl xl:leading-10">
+        <p className="mb-6 text-lg font-medium leading-8 text-gray-900 xl:text-xl xl:leading-10">
           {content}
         </p>
         <a

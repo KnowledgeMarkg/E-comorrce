@@ -136,8 +136,8 @@ export default function Footer() {
                 style={{ color: mode === "dark" ? "white" : "" }}
               >
                 <img
-                  className="inline-block w-20"
-                  src="https://media6.ppl-media.com/static/purplle/img/purplle-logo-1.svg"
+                  className="inline-block w-full sm:w-44 h-auto"
+                  src="https://scontent.flko1-2.fna.fbcdn.net/v/t39.30808-6/425340510_1086160845932097_9138240804630334141_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=3635dc&_nc_ohc=uq-hEiNsfLEAX9hNLDf&_nc_ht=scontent.flko1-2.fna&oh=00_AfCZWukE_lGpx27VkX7C4ZKbgl4A0VLgpelWjUQ3Yze_bw&oe=65DAE93C"
                   alt="Dan_Abromov"
                 />
               </h1>

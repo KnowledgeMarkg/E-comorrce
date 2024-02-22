@@ -5,10 +5,9 @@ import { BsFillCloudSunFill } from "react-icons/bs";
 import { FiSun } from "react-icons/fi";
 import myContext from "../../context/data/myContext";
 import { RxCross2 } from "react-icons/rx";
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { useSelector } from "react-redux";
-
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -27,7 +26,6 @@ export default function Navbar() {
       window.location.href = "/login";
     }, 1000);
   };
-  
 
   return (
     <div className="bg-white sticky top-0 z-50  ">
@@ -82,13 +80,17 @@ export default function Navbar() {
                     All Products
                   </Link>
                   <div className="flow-root">
-                    {user ?                     <Link
-                      to={"/order"}
-                      style={{ color: mode === "dark" ? "white" : "" }}
-                      className="-m-2 block p-2 font-medium text-gray-900"
-                    >
-                      Order
-                    </Link> :""}
+                    {user ? (
+                      <Link
+                        to={"/order"}
+                        style={{ color: mode === "dark" ? "white" : "" }}
+                        className="-m-2 block p-2 font-medium text-gray-900"
+                      >
+                        Order
+                      </Link>
+                    ) : (
+                      ""
+                    )}
                   </div>
 
                   {user?.user?.email === "knowledgemarkg@gmail.com" ? (
@@ -117,20 +119,20 @@ export default function Navbar() {
                     </div>
                   ) : (
                     <>
-                    <Link
-                      to={"/signup"}
-                      className="-m-1 block p-1 font-medium text-gray-900 cursor-pointer"
-                      style={{ color: mode === "dark" ? "white" : "" }}
-                    >
-                      Signup
-                    </Link>
-                    <Link
-                      to={"/login"}
-                      className="-m-2 block p-2 font-medium text-gray-900 cursor-pointer"
-                      style={{ color: mode === "dark" ? "white" : "" }}
-                    >
-                      login
-                    </Link>
+                      <Link
+                        to={"/signup"}
+                        className="-m-1 block p-1 font-medium text-gray-900 cursor-pointer"
+                        style={{ color: mode === "dark" ? "white" : "" }}
+                      >
+                        Signup
+                      </Link>
+                      <Link
+                        to={"/login"}
+                        className="-m-2 block p-2 font-medium text-gray-900 cursor-pointer"
+                        style={{ color: mode === "dark" ? "white" : "" }}
+                      >
+                        login
+                      </Link>
                     </>
                   )}
                   <div className="flow-root">
@@ -226,8 +228,8 @@ export default function Navbar() {
                       style={{ color: mode === "dark" ? "white" : "" }}
                     >
                       <img
-                        className="inline-block w-20"
-                        src="https://media6.ppl-media.com/static/purplle/img/purplle-logo-1.svg"
+                        className="inline-block w-full sm:w-44 h-auto"
+                        src="https://scontent.flko1-2.fna.fbcdn.net/v/t39.30808-6/425340510_1086160845932097_9138240804630334141_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=3635dc&_nc_ohc=uq-hEiNsfLEAX9hNLDf&_nc_ht=scontent.flko1-2.fna&oh=00_AfCZWukE_lGpx27VkX7C4ZKbgl4A0VLgpelWjUQ3Yze_bw&oe=65DAE93C"
                         alt="Dan_Abromov"
                       />
                     </h1>
@@ -244,13 +246,17 @@ export default function Navbar() {
                   >
                     All Products
                   </Link>
-                  {user ? <Link
-                    to={"/order"}
-                    className="text-sm font-medium text-gray-700 "
-                    style={{ color: mode === "dark" ? "white" : "" }}
-                  >
-                    Order
-                  </Link>: ""}
+                  {user ? (
+                    <Link
+                      to={"/order"}
+                      className="text-sm font-medium text-gray-700 "
+                      style={{ color: mode === "dark" ? "white" : "" }}
+                    >
+                      Order
+                    </Link>
+                  ) : (
+                    ""
+                  )}
 
                   {user?.user?.email === "knowledgemarkg@gmail.com" ? (
                     <Link
@@ -274,20 +280,20 @@ export default function Navbar() {
                     </a>
                   ) : (
                     <>
-                    <Link
-                      to={"/signup"}
-                      className="text-sm font-medium text-gray-700 cursor-pointer  "
-                      style={{ color: mode === "dark" ? "white" : "" }}
-                    >
-                      Signup
-                    </Link>
-                    <Link
-                      to={"/login"}
-                      className="text-sm font-medium text-gray-700 cursor-pointer  "
-                      style={{ color: mode === "dark" ? "white" : "" }}
-                    >
-                      login
-                    </Link>
+                      <Link
+                        to={"/signup"}
+                        className="text-sm font-medium text-gray-700 cursor-pointer  "
+                        style={{ color: mode === "dark" ? "white" : "" }}
+                      >
+                        Signup
+                      </Link>
+                      <Link
+                        to={"/login"}
+                        className="text-sm font-medium text-gray-700 cursor-pointer  "
+                        style={{ color: mode === "dark" ? "white" : "" }}
+                      >
+                        login
+                      </Link>
                     </>
                   )}
                 </div>

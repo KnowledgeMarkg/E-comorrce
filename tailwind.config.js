@@ -16,6 +16,9 @@ module.exports = withMT({
           500: '#031525', // Example custom color
         },
       },
+      height: {
+        'custom': '27rem', // Add your custom width size here
+      },
     },
   },
   variants: {},
