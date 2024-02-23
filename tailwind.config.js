@@ -17,7 +17,7 @@ module.exports = withMT({
         },
       },
       height: {
-        'custom': '27rem', // Add your custom width size here
+        'custom': '30rem', // Add your custom width size here
       },
     },
   },

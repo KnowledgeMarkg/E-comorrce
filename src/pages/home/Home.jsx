@@ -20,12 +20,13 @@ const Home = () => {
       >
         <Carosel />
         <HeroSection
-          content="It's a team-based strategy game where two teams of five powerful champions face off to destroy the other’s base. Choose from over 140 champions to make epic plays, secure kills, and take down towers as you battle your way to victory."
-          category="MOBA"
-          title="LEAGUE OF LEGENDS"
+          content="Experience the beauty of nail care with our premium nail polish collection. Choose from a variety of vibrant colors and long-lasting formulas for nails that make a statement."
+          category="Nail Care"
+          title="Nail Polish Collection"
           url="#"
-          videoSrc="https://www.leagueoflegends.com/static/hero-3e934348790824f4b800524f96a93020.mp4"
+          videoSrc="https://www.shutterstock.com/shutterstock/videos/1032404222/preview/stock-footage-manicure-and-pedicure-in-beauty-salon-spa-skin-care-moisturizing-concept-healthy-female-hands.webm"
         />
+
         <Filter />
         <ProductCard />
         <Track />
