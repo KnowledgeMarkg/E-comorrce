@@ -47,7 +47,7 @@ export default function Modal({
         <button
           type="button"
           onClick={() => checkUser(user, openModal, navigate)}
-          className="w-full bg-violet-600 py-2 text-center rounded-lg text-white font-bold"
+          className="w-full bg-violet-600 py-2 text-center rounded-lg text-white bg-black font-bold"
           style={{
             backgroundColor: mode === "dark" ? "rgb(62 64 66)" : "",
             color: mode === "dark" ? "white" : "",
@@ -59,7 +59,7 @@ export default function Modal({
 
       <Transition
         appear
-        show={isOpen}
+        show={isOpen} 
         as={Fragment}
         style={{
           backgroundColor: mode === "dark" ? "rgb(62 64 66)" : "",
@@ -80,7 +80,7 @@ export default function Modal({
           </Transition.Child>
 
           <div className="fixed inset-0 overflow-y-auto ">
-            <div className="flex min-h-full items-center justify-center p-4 text-center mb-8 pt-20">
+            <div className="flex min-h-full items-center justify-center text-center  pt-24">
               <Transition.Child
                 as={Fragment}
                 enter="ease-out duration-300"
@@ -91,7 +91,7 @@ export default function Modal({
                 leaveTo="opacity-0 scale-95"
               >
                 <Dialog.Panel
-                  className="w-full max-w-md transform overflow-hidden rounded-2xl p-2  text-left align-middle shadow-xl transition-all bg-gray-50"
+                  className="w-full mt-4 max-w-md transform overflow-hidden rounded-2xl p-2  text-left align-middle shadow-xl transition-all bg-gray-50"
                   style={{
                     backgroundColor: mode === "dark" ? "rgb(62 64 66)" : "",
                     color: mode === "dark" ? "white" : "",
@@ -100,12 +100,12 @@ export default function Modal({
                   <section className="">
                     <div className="flex flex-col items-center justify-center py-8 mx-auto  lg:py-0">
                       <div className="w-full  rounded-lg md:mt-0 sm:max-w-md xl:p-0 ">
-                        <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
+                        <div className="p-2 space-y-4 md:space-y-6 sm:p-8">
                           <form className="space-y-4 md:space-y-6" action="#">
                             <div>
                               <label
                                 htmlFor="name"
-                                className="block mb-2 text-sm font-medium text-gray-900"
+                                className="block text-sm font-medium text-gray-900"
                                 style={{
                                   color: mode === "dark" ? "white" : "",
                                 }}
@@ -130,7 +130,7 @@ export default function Modal({
                             <div>
                               <label
                                 htmlFor="email"
-                                className="block mb-2 text-sm font-medium text-gray-900"
+                                className="block mb-1 text-sm font-medium text-gray-900"
                                 style={{
                                   color: mode === "dark" ? "white" : "",
                                 }}
@@ -155,7 +155,7 @@ export default function Modal({
                             <div>
                               <label
                                 htmlFor="pincode"
-                                className="block mb-2 text-sm font-medium text-gray-900"
+                                className="block mb-1 text-sm font-medium text-gray-900"
                                 style={{
                                   color: mode === "dark" ? "white" : "",
                                 }}
@@ -180,7 +180,7 @@ export default function Modal({
                             <div>
                               <label
                                 htmlFor="mobileNumber"
-                                className="block mb-2 text-sm font-medium text-gray-900"
+                                className="block mb-1 text-sm font-medium text-gray-900"
                                 style={{
                                   color: mode === "dark" ? "white" : "",
                                 }}
@@ -209,7 +209,7 @@ export default function Modal({
                               closeModal();
                             }}
                             type="button"
-                            className="focus:outline-none w-full text-white bg-violet-600 hover:bg-violet-800  outline-0 font-medium rounded-lg text-sm px-5 py-2.5 "
+                            className="focus:outline-none w-full text-black bg-blue-gray-800 hover:bg-gray-500-800  outline-0 font-medium rounded-lg text-sm px-5 py-2.5 "
                             style={{ color: mode === "dark" ? "white" : "" }}
                           >
                             Order Now

@@ -87,13 +87,16 @@ function Allproducts() {
                       </div>
                       <div className="p-5 border-t-2">
                         <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1" style={{ color: mode === 'dark' ? 'white' : '' }}>
-                          E-Bharat
+                          Nail Polish
                         </h2>
                         <h1 className="title-font text-lg font-medium text-gray-900 mb-3" style={{ color: mode === 'dark' ? 'white' : '' }}>
-                          {title}
+                        {title.length > 35
+                        ? title.substring(0, 35) + "..."
+                        : title}
+                          {/* {title} */}
                         </h1>
                         <p className="leading-relaxed mb-3" style={{ color: mode === 'dark' ? 'white' : '' }}>
-                          ₹{price}
+                          ${price}
                         </p>
                         <div className="flex justify-center">{renderBuyButton(item)}</div>
                       </div>

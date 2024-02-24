@@ -61,13 +61,13 @@ function Footer() {
                   <Link to={"/"} className="flex">
                       <div className="flex ">
                           <h1 className="text-2xl font-bold text-black  px-2 py-1 rounded" style={{ color: mode === 'dark' ? 'white' : '' }}>
-                              <img className="inline-block w-full sm:w-44 h-auto" src="https://scontent.flko1-2.fna.fbcdn.net/v/t39.30808-6/425340510_1086160845932097_9138240804630334141_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=3635dc&_nc_ohc=uq-hEiNsfLEAX9hNLDf&_nc_ht=scontent.flko1-2.fna&oh=00_AfCZWukE_lGpx27VkX7C4ZKbgl4A0VLgpelWjUQ3Yze_bw&oe=65DAE93C" alt="Dan_Abromov" />
+                              <img className="inline-block w-full sm:w-44 h-12" src="https://media6.ppl-media.com/static/purplle/img/purplle-logo-1.svg" alt="Dan_Abromov" />
                           </h1>
                       </div>
                   </Link>
                   <p className="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4" style={{ color: mode === 'dark' ? 'white' : '' }}>
                       © 2023 Nail Polish  —
-                      <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" className="text-gray-600 ml-1" target="_blank" style={{ color: mode === 'dark' ? 'white' : '' }}>NailPolish.us</a>
+                      <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" className="text-gray-600 ml-1" target="_blank" style={{ color: mode === 'dark' ? 'white' : '' }}>nailpolish.us</a>
                   </p>
                   <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
                       <a className="text-gray-500">

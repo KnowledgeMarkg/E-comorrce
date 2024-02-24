@@ -79,6 +79,20 @@ export default function Navbar() {
                   >
                     All Products
                   </Link>
+                  <Link
+                    to={"/contact"}
+                    className="text-sm font-medium text-gray-900 "
+                    style={{ color: mode === "dark" ? "white" : "" }}
+                  >
+                    Contact
+                  </Link>
+                  <Link
+                    to={"/about"}
+                    className="text-sm font-medium text-gray-900 "
+                    style={{ color: mode === "dark" ? "white" : "" }}
+                  >
+                    About
+                  </Link>
                   <div className="flow-root">
                     {user ? (
                       <Link
@@ -142,7 +156,7 @@ export default function Navbar() {
                     >
                       <img
                         className="inline-block w-10 h-10 rounded-full"
-                        src="https://img.freepik.com/free-photo/androgynous-avatar-non-binary-queer-person_23-2151100226.jpg?size=626&ext=jpg"
+                        src="https://media6.ppl-media.com/static/purplle/img/purplle-logo-1.svg"
                         alt="Dan_Abromov"
                       />{" "}
                     </Link>
@@ -228,8 +242,8 @@ export default function Navbar() {
                       style={{ color: mode === "dark" ? "white" : "" }}
                     >
                       <img
-                        className="inline-block w-full sm:w-44 h-auto"
-                        src="https://scontent.flko1-2.fna.fbcdn.net/v/t39.30808-6/425340510_1086160845932097_9138240804630334141_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=3635dc&_nc_ohc=uq-hEiNsfLEAX9hNLDf&_nc_ht=scontent.flko1-2.fna&oh=00_AfCZWukE_lGpx27VkX7C4ZKbgl4A0VLgpelWjUQ3Yze_bw&oe=65DAE93C"
+                        className="inline-block w-full sm:w-44 h-12"
+                        src="https://media6.ppl-media.com/static/purplle/img/purplle-logo-1.svg"
                         alt="Dan_Abromov"
                       />
                     </h1>
@@ -245,6 +259,20 @@ export default function Navbar() {
                     style={{ color: mode === "dark" ? "white" : "" }}
                   >
                     All Products
+                  </Link>
+                  <Link
+                    to={"/contact"}
+                    className="text-sm font-medium text-gray-700 "
+                    style={{ color: mode === "dark" ? "white" : "" }}
+                  >
+                    Contact
+                  </Link>
+                  <Link
+                    to={"/about"}
+                    className="text-sm font-medium text-gray-700 "
+                    style={{ color: mode === "dark" ? "white" : "" }}
+                  >
+                    About
                   </Link>
                   {user ? (
                     <Link
